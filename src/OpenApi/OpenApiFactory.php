@@ -24,7 +24,6 @@ class OpenApiFactory implements OpenApiFactoryInterface
                 $openapi->getPaths()->addPath($key, $path->withGet(null));
             }
         }
-        $openapi->getPaths()->addPath('/ping', new PathItem(null, 'Ping', null, new Operation('ping-id', [], [], 'Répond')));
         return $openapi;
     }
 }
